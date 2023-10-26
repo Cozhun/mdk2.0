@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,14 @@ namespace mdk2._0.User
             this.password = password;
             this.userList = new List<User>();
 
+        }
+        public void AddAdmin()
+        {
+            string adminUsername = "admin";
+            string adminPassword = "password"; 
+
+            User adminUser = new User(adminUsername, adminPassword);
+            userList.Add(adminUser);
         }
 
         public void AddUser()
